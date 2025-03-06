@@ -1,6 +1,7 @@
 // src/components/BookCard.jsx
 
 import React from "react";
+import { Link } from "react-router-dom";
 import "./BookCard.css"; // Import the CSS for styling
 
 const BookCard = ({ book }) => {
@@ -13,6 +14,9 @@ const BookCard = ({ book }) => {
         <h2 className="book-title">{title}</h2>
         <h3 className="book-author">by {author}</h3>
         <p className="book-description">{description}</p>
+        <Link to="/add-book">
+          <button className="add-book-button">Add Book</button>
+        </Link>
       </div>
     </div>
   );
